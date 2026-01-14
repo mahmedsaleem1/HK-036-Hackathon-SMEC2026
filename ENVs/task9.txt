@@ -11,7 +11,7 @@ JWT_EXPIRE=7d
 # Email Configuration (Use your SMTP credentials)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=mahmedsaleem786@gmail.com
-SMTP_PASS=dtwbmltneuzsngli
-FROM_EMAIL=mahmedsaleem786@gmail.com
+SMTP_USER=---
+SMTP_PASS=---
+FROM_EMAIL=---
 FROM_NAME=Campus Hub
