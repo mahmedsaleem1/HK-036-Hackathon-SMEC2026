@@ -8,7 +8,7 @@ connectDB().then((connected) => {
   app.listen(PORT, () => {
     console.log(`Social Media Server running on port ${PORT}`);
     if (!connected) {
-      console.log('⚠️  Server running but database is not connected!');
+      console.log(' Server running but database is not connected!');
     }
   });
 });
