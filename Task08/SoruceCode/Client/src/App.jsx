@@ -1,10 +1,10 @@
 import './App.css'
+import LyricsWordCloud from './components/LyricsWordCloud'
 
 function App() {
   return (
     <div className="App">
-      <h1>Task08 Client</h1>
-      <p>React + Vite Application</p>
+      <LyricsWordCloud />
     </div>
   )
 }
