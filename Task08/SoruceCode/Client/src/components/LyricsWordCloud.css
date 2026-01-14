@@ -1,0 +1,367 @@
+.lyrics-wordcloud-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #faf8f5;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0;
+  background: none;
+  color: #3d3d3d;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.header h1 {
+  margin: 0 0 15px 0;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #2c2c2c;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  margin: 0;
+  color: #6b6b6b;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+.search-section {
+  background: #fff;
+  padding: 35px 40px;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid #e8e4df;
+  margin-bottom: 40px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-field {
+  padding: 14px 16px;
+  border: 1px solid #d4cfc7;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: 'Georgia', serif;
+  transition: border-color 0.2s;
+  background: #fdfcfa;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #8b7355;
+  background: #fff;
+}
+
+.input-field:disabled {
+  background-color: #f5f3f0;
+  cursor: not-allowed;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary {
+  background: #5d4e37;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #4a3d2c;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #f5f3f0;
+  color: #5d4e37;
+  border: 1px solid #d4cfc7;
+}
+
+.btn-secondary:hover {
+  background: #ebe8e3;
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background: #fdf6f4;
+  border: 1px solid #e8c7c0;
+  border-radius: 3px;
+  color: #8b4d3b;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.error-icon {
+  font-size: 20px;
+}
+
+.loading-message {
+  margin-top: 30px;
+  text-align: center;
+  padding: 40px;
+  color: #6b6b6b;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #e8e4df;
+  border-top: 2px solid #8b7355;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.results-section {
+  margin-top: 40px;
+}
+
+.song-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  border: 1px solid #e8e4df;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.song-info h2 {
+  margin: 0 0 8px 0;
+  color: #2c2c2c;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.song-info .artist {
+  font-size: 1.2rem;
+  color: #6b6b6b;
+  margin: 0 0 12px 0;
+  font-style: italic;
+}
+
+.song-info .source {
+  color: #999;
+  font-size: 0.85rem;
+  margin: 5px 0;
+}
+
+.song-info a {
+  color: #8b7355;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.song-info a:hover {
+  text-decoration: underline;
+}
+
+.wordcloud-container {
+  background: #fff;
+  padding: 35px;
+  border-radius: 4px;
+  border: 1px solid #e8e4df;
+  margin-bottom: 25px;
+}
+
+.wordcloud-container h3 {
+  margin-top: 0;
+  color: #3d3d3d;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.wordcloud-canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #faf8f5;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 400px;
+  width: 100%;
+}
+
+.stats-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  border: 1px solid #e8e4df;
+  margin-bottom: 25px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: #faf8f5;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #e8e4df;
+}
+
+.stat-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 0.8rem;
+  color: #8b7355;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #3d3d3d;
+}
+
+.top-words-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  border: 1px solid #e8e4df;
+  margin-bottom: 25px;
+}
+
+.top-words-container h3 {
+  margin-top: 0;
+  color: #3d3d3d;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.top-words-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.word-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #faf8f5;
+  border-radius: 3px;
+  border-left: 3px solid #8b7355;
+}
+
+.word-rank {
+  font-weight: 400;
+  color: #999;
+  min-width: 28px;
+  font-size: 0.9rem;
+}
+
+.word-text {
+  flex: 1;
+  font-weight: 500;
+  color: #3d3d3d;
+}
+
+.word-count {
+  color: #8b7355;
+  font-weight: 500;
+}
+
+.lyrics-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  border: 1px solid #e8e4df;
+  text-align: center;
+}
+
+.lyrics-display {
+  margin-top: 25px;
+  padding: 25px;
+  background: #faf8f5;
+  border-radius: 4px;
+  max-height: 500px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.lyrics-display pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Georgia', serif;
+  line-height: 1.9;
+  color: #4a4a4a;
+  text-align: left;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .lyrics-wordcloud-container {
+    padding: 20px 15px;
+  }
+}
